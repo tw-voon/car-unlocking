@@ -1,0 +1,37 @@
+<ion-view view-title="E Key">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="toggle()"></button>
+    </ion-nav-buttons>
+    <ion-content>
+
+    <div class="row">
+    		<h2>Number of key left: {{ctrl.maxKey}}</h2>
+    </div>
+    <div style="display: block; text-align: center">
+
+    <button 
+        class="button button-medium icon icon-left ion-plus-circled button-clear" 
+        style="width: 30vw;"
+        ng-click="ctrl.setup()"> <h4>Generate</h4>
+    </button>
+
+    </div>
+
+    <div class="row" ng-repeat="key in numberOfKey">
+        <div class="list" style="width: 100vw; padding-bottom: 10px;">
+
+          <div class="item item-input-inset">
+          <button class="button button-small button-light icon icon-left ion-ios-close-outline" ng-click="ctrl.remove($index)"></button>
+            <label class="item-input-wrapper">
+              <input type="text" placeholder="E-Key" ng-model="key.key_1">
+            </label>
+            <button class="button button-small">
+              {{$index}} Edit
+            </button>
+          </div>
+
+        </div>
+    </div>
+    
+    </ion-content>
+    </ion-view>

@@ -1,0 +1,13 @@
+{
+  "name": "helloionic",
+  "private": "true",
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "ngCordova": "^0.1.24-alpha",
+    "hammerjs": "~2.0.4",
+    "jquery": "~2.1.4",
+    "ion-datetime-picker": "^0.4.1"
+  }
+}

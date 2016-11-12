@@ -1,0 +1,64 @@
+<ion-view view-title="language" id="setting">
+<ion-header-bar class ="bar-light">
+    <h1 class ="title">Generate E-Key</h1>
+    <a class = "button button-icon icon ion-close" ng-click='ctrl.hideModal()'></a>
+</ion-header-bar>
+    <div ng-class="fontsize">
+<ion-content class="filter-background">
+
+  <div class="item item-divider">
+    Please fill in the details
+  </div>
+
+  <form name="register">
+  	<div class="list">
+  		<label class="item item-input item-stacked-label">
+    		<span class="input-label">Username</span>
+    		<input type="text" placeholder="John" ng-model="ctrl.temp.name">
+  		</label>
+  		<label class="item item-input item-stacked-label">
+    		<span class="input-label">Password</span>
+    		<input type="text" placeholder="Suhr" ng-model="ctrl.temp.password">
+  		</label>
+  		<div class="item item-divider">
+   			Valid From:
+  		</div>
+  		<label class="item item-input item-stacked-label">
+    		<span class="input-label">Date</span>
+    		<input type="date" placeholder="Date" ng-click="ctrl.showDate()" ng-model="ctrl.temp.from_date">
+  		</label>
+  		<label class="item item-input item-stacked-label">
+    		<span class="input-label">Time</span>
+    		<input type="time" placeholder="00:00" ng-click="ctrl.showTime()" ng-model="ctrl.temp.from_time">
+  		</label>
+  		<div class="item item-divider">
+   			Valid until:
+  		</div>
+  		<label class="item item-input item-stacked-label">
+    		<span class="input-label">Date</span>
+    		<input type="date" placeholder="Date" ng-click="ctrl.showDate()" ng-model="ctrl.temp.to_date">
+  		</label>
+  		<label class="item item-input item-stacked-label">
+    		<span class="input-label">Time</span>
+    		<input type="time" placeholder="00:00" ng-click="ctrl.showTime()" ng-model="ctrl.temp.to_time">
+  		</label>
+  		<!-- <label class="item item-input item-stacked-label">
+    		<div class="item" ion-datetime-picker ng-model="datetimeValue">
+        	{{datetimeValue| date: "yyyy-MM-dd H:mm:ss"}}
+    	</div>
+  		</label> -->
+	</div>
+  </form>
+  
+  </ion-content>
+
+  <ion-footer-bar>
+    <div style="width: 100%;">
+      <div class="button-bar">
+          <button class="button reset" ng-click="resetChoice()">Reset</button>
+          <button class="button button-balanced" ng-click="ctrl.generate()"><span style="color: white;">Generate</span></button>
+      </div>
+    </div>
+  </ion-footer-bar>
+  </div>
+  </ion-view>

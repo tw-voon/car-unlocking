@@ -1,0 +1,53 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content drag-content="false">
+    <ion-nav-bar class="bar-assertive">
+      <ion-nav-back-button ng-click="goBack()" nav-direction="back">
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear icon ion-navicon" ng-click="toggle()"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+
+  </ion-side-menu>
+</ion-side-menus>
+
+<!-- stripe on the left of the screen to detect slide from side of the screen -->
+<div id="swipeArea"></div>
+
+<!-- body of the menu drawer -->
+<div id="menuDrawer">
+    <ion-content id="mainMenu" drag-content="false">
+        <div class="item bar-header">
+            <p>CAR UNLOCK</p>
+            <h2>VOWOLITA</h2>
+        </div>
+
+        <ion-list>
+            <a class="item item-icon-left leftMenuItem" ng-click="hide()" ui-sref="app.profile">
+                <i class="icon ion-person"></i>
+                Profile
+            </a>
+            <a class="item item-icon-left leftMenuItem" ng-click="hide()" ui-sref="app.ekey">
+                <i class="icon ion-key"></i>
+                Share key
+            </a>
+            <a class="item item-icon-left leftMenuItem" ng-click="hide()" ui-sref="app.setting">
+                <i class="icon ion-gear-a"></i>
+                Setting
+            </a>
+            <a class="item item-icon-left leftMenuItem" ng-click="hide()" ui-sref="app.main">
+                <i class="icon ion-log-out"></i>
+                Log Out
+            </a>
+
+        </ion-list>
+    </ion-content>
+</div>
+
+<!-- takes care of the overlay dimming -->
+<div id="backDrop" ng-click="hideMenuFromBackDrop()" class="nativeClick"></div>

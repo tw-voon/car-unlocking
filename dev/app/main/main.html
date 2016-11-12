@@ -1,0 +1,35 @@
+<ion-view view-title="Unlocking Page">
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" ng-click="toggle()"></button>
+    </ion-nav-buttons>
+
+    <ion-content id="mainMenu">
+    	
+    	<div class="_center">
+
+    	<div class="row row-center">
+    		<button class="button button-positive ion-unlocked round" ng-click="ctrl.unlock()"><h4>Unlock</h4></button>
+    	</div>
+    	
+    	<br>
+    	
+    	<div class="row">
+    		<button class="button button-assertive ion-locked round" ng-click="ctrl.lock()"><h4>Lock</h4></button>
+    	</div>
+
+    	</div>
+
+        <!-- <div class="row">
+        <div class="col-sm-offset-5 col-sm-2 text-center">
+        <div class="btn-group" data-toggle="buttons">
+            <button class="button button-positive round"></button>
+            <button class="button button-positive round"></button>
+        </div>
+        </div>
+        </div> -->
+    	
+        <!-- <h3>Key: {{::vm.key}}</h3>
+        <p ng-bind="::vm.desc"></p> -->
+    </ion-content>
+
+</ion-view>

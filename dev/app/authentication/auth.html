@@ -1,0 +1,26 @@
+<ion-view hide-nav-bar="true">
+    <ion-content id = "login" scroll="false">
+    <div style="width: 80vw; display: block; margin: auto; margin-top: 40vw;">  
+    <form name="login"> 
+     <div class="list" style="display: block; margin: 0 auto;">
+     	<label class="item item-input item-stacked-label">
+		    <span class="input-label">Username</span>
+		    <input type="text" placeholder="Username" name="username" ng-model="ctrl.username" ng-minlength="5" required>
+		  </label>
+		  <div>
+            <p ng-show="login.username.$invalid && !login.username.$pristine">* Username must be an email address</p>
+            <p ng-show="login.username.$error.minlength">* Username must be longer than 5 characters</p>
+          </div>
+		  <label class="item item-input item-stacked-label">
+		    <span class="input-label">Password</span>
+		    <input type="password" placeholder="Password" name="password" ng-model="ctrl.password" required>
+		  </label>
+	</div>
+		<div>
+            <p ng-show="login.password.$error.minlength">* Password must be longer than 6 characters</p>
+        </div>
+	<button class="button button-positive button-block" ng-click="ctrl.login()" ng-disabled="login.$invalid">Login</button>
+     </form>
+    </div>
+    </ion-content>
+</ion-view>
